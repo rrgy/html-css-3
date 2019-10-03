@@ -1,22 +1,128 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
+header{
+  height: 50px;
+  widows: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-bar{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.bootstrap{
+  color: #fed136;
+  margin: 0;
+}
+.menuButton{
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #fed136;
+  color: white;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+}
+.container{
+  display: flex;
+  
+}
+.buttons{
+  margin-left: 30px;
+  color: white
+}
+.container-dropdown{
+  background-color:#212529;
+  height: 30vh;
+  width: 100vw;
+  /* overflow: hidden; */
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  padding-left: 10px
+}
+.hide-animation {
+  animation-name: hide;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.show-animation {
+  animation-name: show;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-.App-link {
-  color: #09d3ac;
+
+.image{
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h1{
+  color: white;
+  font-style: italic;
+  margin: 0;
+  text-align: center
+}
+.meet-you{
+  font-style: normal;
+  font-size: 50px;
+}
+.more-button{
+  background-color: #fed136;
+  height: 70px;
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 990px){
+  .menuButton, .container-dropdown {
+    display: none;
+  }
+  
+}
+
+@media (max-width: 990px){
+  .container{
+    display: none;
+  }
+  .container-dropdown{
+    display:none;
+  }
+  
+}
+
+@keyframes hide{
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 0px
+  }
+}
+
+@keyframes show {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 100px;
+  }
 }
